@@ -1,37 +1,45 @@
 <!--index.wxml-->
 <view class = "titlebar">
-<text class = "title_text" id = "user_name">hello {{nickname}},</text>
+<text class = "title_text" id = "user_name">hello XiaoWu,</text>
 </view>
+<view class="titlebar_padding"></view>
 <view class="cntr">
   <view class = "banner" id = "rctud_title">
     <text class = "banner_text" id = "rctud">Recent Update(subscribe)</text>
     <text class = "banner_num" id = "rctud_num">xx Update</text>
   </view>
-  <view class = "displaybar" id = "rctud_cont">
-    <ul wx:for="{{rctud}}" wx:for-item="item">
-      <li><image class = "show_box" src="{{item.img_path}}" mode="aspectFit"></image></li>
-    </ul>
-    <view class = "more">more</view>
-  </view>
+  
+  <scroll-view class="displaybar" id="rctud_cont" scroll-x="ture">
+      <view class = "show_box" wx:for="{{rctud}}" wx:for-item="item">
+        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.img_name}}</view>
+      </view>
+      <view class="more">more</view>
+  </scroll-view>
+
   <view class = "banner" id = "nyud_title">
     <text class = "banner_text" id = "nyud">Newly Update(subscribe)</text>
     <text class = "banner_num" id = "nyud_num">xx Update</text>
   </view>
-  <view class = "displaybar" id = "nyud_cont">
-    <ul wx:for="{{nyud}}" wx:for-item="item">
-      <li><image class = "show_box" src="{{item.img_path}}" mode="aspectFit"></image></li>
-    </ul>
-    <view class = "more">more</view>
-  </view>
+  <scroll-view class="displaybar" id="nyud_cont" scroll-x="ture">
+      <view class = "show_box" wx:for="{{nyud}}" wx:for-item="item">
+        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.img_name}}</view>
+      </view>
+      <view class="more">more</view>
+  </scroll-view>
+
   <view class = "banner" id = "hot_title">
     <text class = "banner_text" id = "hot">Hot(subscribe)</text>
     <text class = "banner_num" id = "hot_num">xx Update</text>
   </view>
-  <view class = "displaybar" id = "hot_cont">
-    <ul wx:for="{{hot}}" wx:for-item="item">
-      <li><image class = "show_box" src="{{item.img_path}}" mode="aspectFit"></image></li>
-    </ul>
-    <view class = "more">more</view>
-  </view>
+  <scroll-view class="displaybar" id="hot" scroll-x="ture">
+      <view class = "show_box" wx:for="{{hot}}" wx:for-item="item">
+        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.img_name}}</view>
+      </view>
+      <view class="more">more</view>
+  </scroll-view>
 </view>
-<view class = "footer"></view>
+<view class = "navigator_padding"></view>
+<view class = "navigator">navigator</view>
