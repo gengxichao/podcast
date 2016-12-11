@@ -1,0 +1,21 @@
+#logo{
+    text-align: center;
+    margin-top: 150rpx;
+}
+#title{
+    text-align: center;
+    margin-top: 200rpx;
+}
+#form{
+    text-align: center;
+    position: relative;
+    top:200rpx;
+}
+.input_box{
+    display:flex;
+    background-color: aqua;
+}
+.btn{
+    width: 30%;
+    background-color: lawngreen;
+}

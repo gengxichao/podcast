@@ -1,0 +1,26 @@
+<!--login.wxml-->
+<view id="logo">Pretend there is a logo</view>
+<view id="title">PodCast</view>
+
+<form id="form" bindsubmit="formBindsubmit" bindreset="formReset">
+<view class="label">Username</view>
+  <view class="input_box">
+    <input name="userName"/>
+  </view>
+
+<view class="label">Password</view>
+  <view class="input_box">
+    <input name="password" password="true" />
+  </view>
+
+  <view style="display:flex;margin-top:30px;">
+    <button class="btn" formType="submit" >Log in</button>
+    <button class="btn" formType="reset" >Reset</button>
+  </view>
+</form>
+
+<!--
+<view>{{tip}}</view>
+<view>{{userName}}</view>
+<view>{{password}}</view>
+-->

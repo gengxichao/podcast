@@ -1,0 +1,24 @@
+<!--Personal Infomation-->
+<view id="username">{{username}}</view>
+<form id="form" bindsubmit="formBindsubmit" bindtap="moifiy">
+    <view id="password">
+        <label>Password</label>
+        <input name="password" password="true"/>
+    </view>
+
+    <view id="gender>
+        <label>Gender</label>
+        <radio value="male"></radio>
+        <radio value="female"></radio>
+        <radio value="other"></radio>
+    </view>
+
+    <view id="email">
+        <label>E-mail</label>
+        <input name="email"/>
+    </view>
+
+    <scroll-view id="subscribe">
+    </scroll-view>
+
+</form>
