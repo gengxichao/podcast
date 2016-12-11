@@ -2,6 +2,7 @@
 //Page data
 Page({
   data:{
+    nickname:"XiaoWu",
     rctud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
          img_name:"pic no.1"},
@@ -20,6 +21,11 @@ Page({
         {img_path:"http://www.lumiaxu.com/static/images/pd.png"},
         {img_path:"http://www.lumiaxu.com/static/images/pd.png"},
     ],
+  },
+  login: function() {
+    wx.navigateTo({
+      url: '../login/login'
+    })
   },
   onLoad:function(options){
     var that = this;
@@ -85,7 +91,7 @@ Page({
   onUnload:function(){
     // 页面关闭
     //String6
-  }
+  },
 })
 
 //using wx.downloadfile to download image and audio

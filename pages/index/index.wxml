@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class = "titlebar">
-<text class = "title_text" id = "user_name">hello XiaoWu,</text>
+<text class = "title_text" id = "user_name">hello {{nickname}},</text>
 </view>
 <view class="titlebar_padding"></view>
 <view class="cntr">
@@ -42,4 +42,4 @@
   </scroll-view>
 </view>
 <view class = "navigator_padding"></view>
-<view class = "navigator">navigator</view>
+<view class = "navigator" bindtap="login">navigator</view>
