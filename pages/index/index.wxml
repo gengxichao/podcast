@@ -42,4 +42,9 @@
   </scroll-view>
 </view>
 <view class = "navigator_padding"></view>
-<view class = "navigator" bindtap="login">navigator</view>
+<view class = "navigator">
+    <navigator class="navibtn" url="../login/login">LOG IN</navigator>
+    <navigator class="navibtn" url="../personal/personal">PERSONAL</navigator>
+    <navigator class="navibtn" url="../search/search">SEARCH</navigator>
+    <navigator class="navibtn" url="../personal/personal">DESCRIBE</navigator>
+</view>

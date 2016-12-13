@@ -1,0 +1,14 @@
+#search{
+    text-align: center;
+    margin-top: 20rpx;
+}
+#icon{
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+}
+#input_detail{
+    background-color: skyblue;
+    margin-top: 10rpx;
+    width: 90%;
+    float: right;
+}

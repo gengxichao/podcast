@@ -72,11 +72,19 @@
   height: 125rpx;
 }
 .navigator{
-  width: 100%;
+  width: 99%;
   height: 125rpx;
   position: fixed;
   bottom: 0;
   z-index: 10;
-  background-color: #000000;
-  color:#ffffff;
+  background-color: #ccc;
+  border-width: 5rpx;
+  border-style: solid;
+}
+.navibtn{
+  height: 125rpx;
+  text-align: center;
+  float: left;
+  margin-left: 50rpx;
+  background-color: lightyellow;
 }

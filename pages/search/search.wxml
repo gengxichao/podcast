@@ -1,0 +1,6 @@
+<!--Search-->
+<view id="search">Search</view>
+<form id="form" bindsubmit="formBindsubmit">
+    <icon id="icon" type="search"></icon>
+    <input id="input_detail" auto-focus="true"/>
+</form>

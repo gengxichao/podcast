@@ -1,7 +1,30 @@
 //personal.js
 Page({
   data:{
-    String1
+    username: "Wu Haoyu",
+    password:"123456",
+    email:"shawnzhu2051@gamil.com",
+    telphone:"13500000000",
+    subscribe:[
+          {img_path : "http://www.server110.com/template/images/logo.png",
+           img_name : "pic no.1.1"},
+          {img_path : "http://www.server110.com/template/images/logo.png",
+          img_name : "pic no.1.2"},
+          {img_path : "http://www.server110.com/template/images/logo.png",
+          img_name : "pic no.1.3"},
+          {img_path : "http://www.server110.com/template/images/logo.png",
+          img_name : "pic no.1.4"},
+          {img_path : "http://files.jb51.net/file_images/article/201307/201307130957593.jpg",
+         img_name : "pic no.1.5"},
+          {img_path : "http://www.server110.com/template/images/logo.png",
+          img_name : "pic no.2.1"},
+          {img_path : "http://files.jb51.net/file_images/article/201307/201307130957593.jpg",
+          img_name : "pic no.2.2"},
+          {img_path : "http://www.zhuchenshawn.com/images/pic07.jpg",
+          img_name : "pic no.2.3"},
+          {img_path : "http://www.zhuchenshawn.com/images/pic07.jpg",
+          img_name : "pic no.2.4"},
+    ],
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数

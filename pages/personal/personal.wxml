@@ -1,24 +1,35 @@
 <!--Personal Infomation-->
 <view id="username">{{username}}</view>
 <form id="form" bindsubmit="formBindsubmit" bindtap="moifiy">
-    <view id="password">
+    <view class="detail">
         <label>Password</label>
-        <input name="password" password="true"/>
+        <input name="password" password="true" value="{{password}}" disabled="true"/>
     </view>
 
-    <view id="gender>
-        <label>Gender</label>
-        <radio value="male"></radio>
-        <radio value="female"></radio>
-        <radio value="other"></radio>
+    <view class="detail">
+        <text>Gender</text>
+        <radio-group>
+            <radio value="male" checked="true" disabled="true">male</radio>
+            <radio value="female" disabled="true">female</radio>
+        </radio-group>
     </view>
 
-    <view id="email">
+    <view class="detail">
         <label>E-mail</label>
-        <input name="email"/>
+        <input name="email" value="{{email}}" disabled="true"/>
     </view>
 
-    <scroll-view id="subscribe">
+    <view class="detail">Telphone
+        <input name="telphone" value="{{telphone}}" disabled="true"/>
+    </view>
+
+    <view id="sub_title">SUBSCRIBTION</view>
+    <scroll-view id="subscribe" scroll-y="ture">
+    <!--上下滚动-->
+        <view class = "show_box" wx:for="{{subscribe}}" wx:for-item="item">
+            <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+            <view class="show_detail">{{item.img_name}}</view>
+        </view>
     </scroll-view>
 
 </form>
