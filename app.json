@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/login/login",
     "pages/personal/personal",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/play/play",
+    "pages/signin/signin"
   ],
   "window":{
     "backgroundTextStyle":"light",
