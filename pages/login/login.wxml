@@ -2,7 +2,7 @@
 <view id="logo">Pretend there is a logo</view>
 <view id="title">PodCast</view>
 
-<form id="form" bindsubmit="formBindsubmit" bindreset="formReset">
+<form id="form" bindsubmit="formBindsubmit">
 <view class="label">Username</view>
   <view class="input_box">
     <input name="userName"/>
@@ -13,14 +13,16 @@
     <input name="password" password="true" />
   </view>
 
-  <view style="display:flex;margin-top:30px;">
-    <button class="btn" formType="submit" >Log in</button>
-    <button class="btn" formType="reset" >Reset</button>
+  <view style="margin-top:30px;">
+    <button class="login" formType="submit" >Log in</button>
+    <navigator class="signin" url="../signin/signin">
+        <view style="padding-top:10px;"> Sign in</view>
+    </navigator>
   </view>
 </form>
 
+<view id="tips">{{tip}}</view>
 <!--
-<view>{{tip}}</view>
 <view>{{userName}}</view>
 <view>{{password}}</view>
 -->

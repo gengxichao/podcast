@@ -1,0 +1,30 @@
+#signin{
+    text-align: center;
+    font-size: 50rpx;
+    margin-top: 50rpx;
+    border-width: 0 0 2rpx 0;
+    border-style: solid;
+    border-color: #ccc;
+    font-family: "Verdana";
+}
+.detail{
+    height: 100rpx;
+    width: 100%;
+    text-align: center;
+    margin-top: 40rpx;
+    font-family: "Verdana";
+}
+.input_box{
+    border-width: 1rpx ;
+    border-style: solid;
+    border-color: #ccc;
+    width: 80%;
+    margin-left: 80rpx;
+    border-radius: 10rpx;
+}
+.btn{
+    margin-top: 50rpx;
+    width: 50%;
+    background-color: lightskyblue;
+    font-family: "Verdana";
+}

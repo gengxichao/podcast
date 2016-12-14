@@ -1,21 +1,25 @@
 #username{
-    height: 100rpx;
+    height: 70rpx;
     width: 100%;
     text-align: center;
     margin-top: 50rpx;
     font-size: 50rpx;
+    border-width: 0 0 2rpx 0;
+    border-style: solid;
+    border-color: #ccc;
+    font-family: "Verdana";
 }
 .detail{
     height: 100rpx;
     width: 100%;
     text-align: center;
     margin-top: 30rpx;
+    font-family: "Verdana";
 }
 #subscribe{
     height: 500rpx;
     width: 100%;
     text-align: center;
-    background-color: skyblue;
 }
 .show_box{
   height: 260rpx;
@@ -27,21 +31,34 @@
 .show_pic{
   height: 180rpx;
   width: 180rpx;
-  background-color: #fff;
   display: inline-block;
+  border-width: 2rpx ;
+  border-style: solid;
+  border-color: #ccc;
 }
 .show_detail{
   height: 80rpx;
   width: 180rpx;
-  background-color: greenyellow;
-  color: #ffffff;
   font-size: 30rpx;
   float: right;
+  font-family: "Verdana";
 }
 #sub_title{
-    margin-top: 30rpx;
-    height: 60rpx;
+    height: 50rpx;
     width: 100%;
+    margin-top: 30rpx;
     text-align: center;
-    background-color: lightgreen;
+    font-family: "Verdana";
+    background-color: skyblue;
+    border-width: 2rpx 0 ;
+    border-style: solid;
+    border-color: #ccc;
+}
+.input{
+    width: 75%;
+    border-radius: 10rpx;
+    border-width: 1rpx;
+    border-style: solid;
+    border-color: #ccc;
+    margin-left: 100rpx;
 }

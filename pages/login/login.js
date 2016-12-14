@@ -21,11 +21,4 @@ Page({
       })
     }
   },
-  formReset:function(){
-    this.setData({
-      tip:'',
-      userName:'',
-      password:''
-    })
-  }
 })

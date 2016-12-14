@@ -1,0 +1,33 @@
+#title{
+    margin-top: 40rpx;
+    text-align: center;
+    font-size: 50rpx;
+    border-width: 0 0 1rpx 0;
+    border-style: solid;
+    border-color: #ccc;
+    font-family: "Verdana";
+}
+#pic{
+    height: 500rpx;
+    width: 666rpx;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+    background-color: skyblue;
+    border-width: 2rpx;
+    border-style: solid;
+    border-color: #ccc;
+}
+#audio{
+    margin-top: 50rpx;
+    text-align: center;
+}
+#detail{    
+    width: 90%;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+    font-family: "Verdana";
+}
+#detail_box{
+    width: 100%;
+    background-color: lightskyblue; 
+}

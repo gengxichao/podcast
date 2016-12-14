@@ -3,12 +3,12 @@
 <form id="form" bindsubmit="formBindsubmit" bindtap="moifiy">
     <view class="detail">
         <label>Password</label>
-        <input name="password" password="true" value="{{password}}" disabled="true"/>
+        <input class="input" name="password" password="true" value="{{password}}" disabled="true"/>
     </view>
 
     <view class="detail">
         <text>Gender</text>
-        <radio-group>
+        <radio-group class="input">
             <radio value="male" checked="true" disabled="true">male</radio>
             <radio value="female" disabled="true">female</radio>
         </radio-group>
@@ -16,11 +16,11 @@
 
     <view class="detail">
         <label>E-mail</label>
-        <input name="email" value="{{email}}" disabled="true"/>
+        <input class="input" name="email" value="{{email}}" disabled="true"/>
     </view>
 
     <view class="detail">Telphone
-        <input name="telphone" value="{{telphone}}" disabled="true"/>
+        <input class="input" name="telphone" value="{{telphone}}" disabled="true"/>
     </view>
 
     <view id="sub_title">SUBSCRIBTION</view>

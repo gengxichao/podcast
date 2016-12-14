@@ -1,14 +1,41 @@
 #search{
     text-align: center;
     margin-top: 20rpx;
+    font-family: "Verdana";
 }
 #icon{
     margin-top: 10rpx;
     margin-left: 10rpx;
 }
 #input_detail{
-    background-color: skyblue;
     margin-top: 10rpx;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 2rpx;
     width: 90%;
     float: right;
+    border-radius: 10rpx;
+}
+#result{
+    margin-top: 20rpx;
+}
+.long_show_box{
+    width: 100%;
+    height: 200rpx;
+    margin-top: 20rpx;
+    border-width: 0 0 1rpx 0;
+    border-style: solid;
+    border-color: #ccc;
+    font-family: "Verdana";
+}
+.show_pic{
+    width: 200rpx;
+    height: 200rpx;
+    margin-left: 20rpx;
+    float: left;
+}
+.show_detail{
+    font-size: 50rpx;
+    padding-top: 50rpx;
+    text-align: center;
 }

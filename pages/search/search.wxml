@@ -1,6 +1,12 @@
 <!--Search-->
 <view id="search">Search</view>
 <form id="form" bindsubmit="formBindsubmit">
-    <icon id="icon" type="search"></icon>
+    <icon id="icon" type="search" color="skyblue"></icon>
     <input id="input_detail" auto-focus="true"/>
 </form>
+<scroll-view id="result" >
+    <view class="long_show_box" wx:for="{{result}}" wx:for-item="item">
+        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.img_name}}</view>
+    </view>
+</scroll-view>

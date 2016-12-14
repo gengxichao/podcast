@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <view class = "titlebar">
-<text class = "title_text" id = "user_name">hello {{nickname}},</text>
+<text class = "title_text" id = "user_name">Hello {{nickname}},</text>
 </view>
 <view class="titlebar_padding"></view>
 <view class="cntr">
   <view class = "banner" id = "rctud_title">
-    <text class = "banner_text" id = "rctud">Recent Update(subscribe)</text>
-    <text class = "banner_num" id = "rctud_num">xx Update</text>
+    <text class = "banner_text" id = "rctud">Recent Update</text>
+    <text class = "banner_num" id = "rctud_num">{{rctud_num}} Update</text>
   </view>
   
   <scroll-view class="displaybar" id="rctud_cont" scroll-x="ture">
@@ -14,37 +14,49 @@
         <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
         <view class="show_detail">{{item.img_name}}</view>
       </view>
-      <view class="more">more</view>
+      <view class="more">more></view>
   </scroll-view>
 
   <view class = "banner" id = "nyud_title">
-    <text class = "banner_text" id = "nyud">Newly Update(subscribe)</text>
-    <text class = "banner_num" id = "nyud_num">xx Update</text>
+    <text class = "banner_text" id = "nyud">Newly Update</text>
+    <text class = "banner_num" id = "nyud_num">{{nyud_num}} Update</text>
   </view>
   <scroll-view class="displaybar" id="nyud_cont" scroll-x="ture">
       <view class = "show_box" wx:for="{{nyud}}" wx:for-item="item">
         <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
         <view class="show_detail">{{item.img_name}}</view>
       </view>
-      <view class="more">more</view>
+      <view class="more">more></view>
   </scroll-view>
 
   <view class = "banner" id = "hot_title">
-    <text class = "banner_text" id = "hot">Hot(subscribe)</text>
-    <text class = "banner_num" id = "hot_num">xx Update</text>
+    <text class = "banner_text" id = "hot">Hot</text>
+    <text class = "banner_num" id = "hot_num">{{hot_num}} Update</text>
   </view>
   <scroll-view class="displaybar" id="hot" scroll-x="ture">
       <view class = "show_box" wx:for="{{hot}}" wx:for-item="item">
         <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
         <view class="show_detail">{{item.img_name}}</view>
       </view>
-      <view class="more">more</view>
+      <view class="more">more></view>
   </scroll-view>
 </view>
 <view class = "navigator_padding"></view>
 <view class = "navigator">
-    <navigator class="navibtn" url="../login/login">LOG IN</navigator>
-    <navigator class="navibtn" url="../personal/personal">PERSONAL</navigator>
-    <navigator class="navibtn" url="../search/search">SEARCH</navigator>
-    <navigator class="navibtn" url="../personal/personal">DESCRIBE</navigator>
+    <navigator class="navibtn" url="../login/login">
+      <icon class="icon" type="success_circle" size="30" color="#63B8FF"></icon>
+      <text class="icon_text">LOG IN</text>
+    </navigator>
+    <navigator class="navibtn" url="../personal/personal">
+      <icon class="icon" type="info_circle" size="30" color="#63B8FF"></icon>
+      <text class="icon_text">PERSONAL</text>
+    </navigator>   
+    <navigator class="navibtn" url="../search/search">
+      <icon class="icon" type="search" size="30" color="#63B8FF"></icon>   
+      <text class="icon_text">SEARCH</text>
+    </navigator>
+    <navigator class="navibtn" url="../play/play">
+      <icon class="icon" type="download" size="30" color="#63B8FF"></icon>     
+      <text class="icon_text">DESCRIBE</text>
+    </navigator>
 </view>

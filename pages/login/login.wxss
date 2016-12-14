@@ -5,17 +5,40 @@
 #title{
     text-align: center;
     margin-top: 200rpx;
+    font-family: "Verdana";
 }
 #form{
     text-align: center;
     position: relative;
     top:200rpx;
+    font-family: "Verdana";
 }
 .input_box{
-    display:flex;
-    background-color: aqua;
+    border-width: 1rpx ;
+    border-style: solid;
+    border-color: #ccc;
+    width: 80%;
+    margin-left: 80rpx;
+    border-radius: 10rpx;
 }
-.btn{
+.login{
     width: 30%;
-    background-color: lawngreen;
+    background-color: lightblue;
+    font-family: "Verdana";
+}
+.signin{
+    width: 30%;
+    height: 85rpx;
+    background-color: lightblue;
+    margin-top: 20rpx;
+    margin-left: 260rpx;
+    border-radius: 8rpx;
+    font-size: 33rpx;
+    font-family: "Verdana";
+}
+#tips{
+    font-size: 30rpx;
+    margin-left: 50rpx;
+    margin-top: 250rpx;
+    font-family: "Verdana";
 }

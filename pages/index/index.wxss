@@ -2,23 +2,30 @@
 .titlebar{
   width: 100%;
   height: 50rpx;
-  background-color: black;
   position: fixed;
   z-index: 10;
+  background-color: #fff;
+  border-color: #ccc;
+  border-width: 0 0 2rpx 0;
+  border-style: solid;
+  font-family: "Verdana";
 }
 .titlebar_padding{
   width: 100%;
   height: 50rpx;
 }
 #user_name{
-  color: #ffffff;
   font-size: 30rpx;
   float: right;
 }
 .banner {
   width: 100%;
   height: 150rpx;
-  background-color: blue;
+  background-color: lightskyblue;
+  font-family: "Verdana";
+  border-style: solid;
+  border-width: 2rpx 0 2rpx 0;
+  border-color: #ccc;
 }
 .banner_text{
   float: left;
@@ -49,42 +56,56 @@
 .show_pic{
   height: 180rpx;
   width: 180rpx;
-  background-color: red;
   display: inline-block;
+  border-style: solid;
+  border-width: 2rpx;
+  border-color: #ccc;
 }
 .show_detail{
   height: 80rpx;
   width: 180rpx;
-  background-color: greenyellow;
-  color: #ffffff;
   font-size: 30rpx;
   float: right;
+  font-family: "Verdana";
+
 }
 .more{
-  height: 100rpx;
+  height: 50rpx;
   width: 100rpx;
   font-size: 30rpx;
   margin-left: 30rpx;
-  background-color: cornflowerblue;
+  padding-top: 10rpx;
+  background-color: skyblue;
   display: inline-block;
+  font-family: "Verdana";
+  border-radius: 10rpx;
 }
 .navigator_padding{
   height: 125rpx;
 }
 .navigator{
-  width: 99%;
+  width: 100%;
   height: 125rpx;
   position: fixed;
   bottom: 0;
   z-index: 10;
-  background-color: #ccc;
-  border-width: 5rpx;
+  background-color: #fff;
+  border-width: 2rpx 0 0 0;
   border-style: solid;
+  border-color: #ccc;
 }
 .navibtn{
   height: 125rpx;
   text-align: center;
   float: left;
-  margin-left: 50rpx;
-  background-color: lightyellow;
+  margin-left: 40rpx;
+  font-family: "Verdana";
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.icon_text{
+    display: block;
+}
+.icon{
+    
 }
