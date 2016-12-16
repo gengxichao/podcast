@@ -3,9 +3,10 @@
     margin-top: 20rpx;
     font-family: "Verdana";
 }
-#icon{
-    margin-top: 10rpx;
-    margin-left: 10rpx;
+#icon_button{
+    margin-top: 50rpx;
+    width: 90%;
+    margin-left: 40rpx;
 }
 #input_detail{
     margin-top: 10rpx;
@@ -13,11 +14,12 @@
     border-color: #ccc;
     border-width: 2rpx;
     width: 90%;
-    float: right;
+    float: left;
+    margin-left: 40rpx;
     border-radius: 10rpx;
 }
 #result{
-    margin-top: 20rpx;
+    height: 900rpx;
 }
 .long_show_box{
     width: 100%;
@@ -38,4 +40,10 @@
     font-size: 50rpx;
     padding-top: 50rpx;
     text-align: center;
+}
+#selection{
+    text-align: center;
+    height: 50rpx;
+    margin-top: 20rpx;
+    font-family: "Verdana";
 }

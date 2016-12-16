@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class = "titlebar">
-<text class = "title_text" id = "user_name">Hello {{nickname}},</text>
+<text class = "title_text" id = "user_name">{{nickname}}</text>
 </view>
 <view class="titlebar_padding"></view>
 <view class="cntr">

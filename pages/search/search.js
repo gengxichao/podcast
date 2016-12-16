@@ -1,38 +1,45 @@
   Page({
     data:{
          result:[
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.1"},
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.2"},
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.3"},
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.1"},
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.2"},
-            {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-            img_name:"pic no.3"},
-            ]
+            ],
+          array: ['name', 'author', 'hot'],
+          index: 0,
         },
+      listenerPickerSelected: function(e) {
+      //改变index值，通过setData()方法重绘界面
+      this.setData({
+        index: e.detail.value
+      });
+    }, 
     onLoad:function(options){
       // 页面初始化 options为页面跳转所带来的参数
-      String2
     },
     onReady:function(){
       // 页面渲染完成
-      String3
     },
     onShow:function(){
       // 页面显示
-      String4
     },
     onHide:function(){
       // 页面隐藏
-      String5
     },
     onUnload:function(){
       // 页面关闭
-      String6
-    }
+    },
+    formBindsubmit:function(e){
+      this.setData({
+        "result[0].img_path":"http://www.zhuchenshawn.com/images/pic07.jpg",
+        "result[0].img_name":"result no.1",
+        "result[1].img_path":"http://www.zhuchenshawn.com/images/pic07.jpg",
+        "result[1].img_name":"result no.2",
+        "result[2].img_path":"",
+        "result[2].img_name":"",
+        "result[3].img_path":"",
+        "result[3].img_name":"",
+        "result[4].img_path":"",
+        "result[4].img_name":"",
+        "result[5].img_path":"",
+        "result[5].img_name":"",
+      })
+  },
   })

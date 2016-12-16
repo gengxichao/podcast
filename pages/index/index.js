@@ -2,7 +2,7 @@
 //Page data
 Page({
   data:{
-    nickname:"XiaoWu",
+    nickname:"No Log In",
     rctud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
          img_name:"pic no.1"},

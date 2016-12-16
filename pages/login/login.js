@@ -14,10 +14,17 @@ Page({
       })
     }
     else{
-      this.setData({
-        tip:'',
-        userName:e.detail.value.userName,
-        password:e.detail.value.password
+      wx.navigateBack({
+        delta: 1, // 回退前 delta(默认为1) 页面
+        success: function(res){
+          // success
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
       })
     }
   },
