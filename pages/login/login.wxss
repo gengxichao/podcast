@@ -1,10 +1,14 @@
+Page{
+    background-color: #fbf9fe;
+}
+
 #logo{
     text-align: center;
     margin-top: 150rpx;
 }
 #title{
     text-align: center;
-    margin-top: 200rpx;
+    margin-top: 100rpx;
     font-family: "Verdana";
 }
 #form{
@@ -23,22 +27,30 @@
 }
 .login{
     width: 30%;
-    background-color: lightblue;
+    background-color: lightgreen;
     font-family: "Verdana";
+    display: inline-block;
+    margin:0 20rpx 0;
 }
 .signin{
-    width: 30%;
-    height: 85rpx;
     background-color: lightblue;
-    margin-top: 20rpx;
-    margin-left: 260rpx;
-    border-radius: 8rpx;
-    font-size: 33rpx;
-    font-family: "Verdana";
+}
+.signinNav{
+    display: inline-block;
 }
 #tips{
     font-size: 30rpx;
     margin-left: 50rpx;
     margin-top: 250rpx;
     font-family: "Verdana";
+}
+.input{
+    background-color: white;
+    height: 80rpx;
+}
+input{
+    height: 100%;
+}
+.section{
+    margin: 20rpx 0 20rpx;
 }

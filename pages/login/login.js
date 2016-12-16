@@ -8,22 +8,26 @@ Page({
   formBindsubmit:function(e){
     if(e.detail.value.userName.length==0||e.detail.value.password.length==0){
       this.setData({
-        tip:'Username and Password cannot be empty!',
+        tip:'用户名、密码不能为空~',
         userName:'',
         password:''
       })
     }
     else{
-      wx.navigateBack({
-        delta: 1, // 回退前 delta(默认为1) 页面
-        success: function(res){
-          // success
-        },
-        fail: function() {
-          // fail
-        },
-        complete: function() {
-          // complete
+      this.setData({
+        tip:'登录中...'
+      })
+      var sendData = '{ \
+               "Request":"Login", \
+               "UserName":"' + this.password +'", \
+               "UserPassword":"' + this.userName +'", \
+                }'
+
+      wx.request({
+        url: 'http://localhost/login.Request', //仅为示例，并非真实的接口地址
+        data: sendData,
+        success: function(res) {
+          console.log(res.data)
         }
       })
     }
