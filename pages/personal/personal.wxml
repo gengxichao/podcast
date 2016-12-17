@@ -23,7 +23,7 @@
         <input class="input" name="telphone" value="{{telphone}}" disabled="true"/>
     </view>
 
-    <view id="sub_title">SUBSCRIBTION</view>
+    <view id="sub_title">您的订阅</view>
     <scroll-view id="subscribe" scroll-y="ture">
     <!--上下滚动-->
         <view class = "show_box" wx:for="{{subscribe}}" wx:for-item="item">
