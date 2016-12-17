@@ -10,8 +10,8 @@
   </view>
   
   <scroll-view class="displaybar" id="rctud_cont" scroll-x="ture">
-      <view class = "show_box" wx:for="{{rctud}}" wx:for-item="item">
-        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
+      <view class = "show_box" wx:for="{{rctud}}" wx:for-item="item" bindtap="showDetail">
+        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit" ></image>
         <view class="show_detail">{{item.img_name}}</view>
       </view>
       <view class="more">more></view>

@@ -13,6 +13,8 @@ Page({
     choosebirthday:"点击此处选取您的生日"
   },
   bindDateChange:function(e){
+    console.log("date:")
+    console.log(e.detail.value)
     this.setData({
       date: e.detail.value,
       choosebirthday:""
@@ -21,6 +23,7 @@ Page({
   formBindsubmit:function(e){
     var that = this
     //邮箱正则表达式验证
+    console.log(e.detail.value)
     function checkemail(email_addr){
       var regex = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
       if (regex.test(email_addr))
@@ -63,10 +66,11 @@ Page({
     else{
       that.setData({
         username:e.detail.value.username,
+        nickname:e.detail.value.nickname,
         password:e.detail.value.password,
         email:e.detail.value.email,
-        date:e.detail.value.date,
         telphone:e.detail.value.telphone,
+        gender:e.detail.value.gender,
       })
       if(e.detail.value.gender == "male"){
         male:"true"
@@ -80,8 +84,9 @@ Page({
         "Request":"Register", \n \
         "UserName":"' + that.data.username + '", \n \
         "Password":"' + that.data.password + '", \n \
-        "NickName":"' + that.data.password + '", \n \
-        "DateOfBirth":"' + that.data.password + '", \n \
+        "Repassword":"'+ that.data.password + '", \n \
+        "NickName":"' + that.data.nickname + '", \n \
+        "DateOfBirth":"' + that.data.date + '", \n \
         "Gender":"' + that.data.gender + '", \n \
         "Email":"' + that.data.email + '", \n \
         "PhoneNumber":"' + that.data.telphone + '", \n \

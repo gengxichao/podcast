@@ -104,6 +104,14 @@ Page({
       }
     })
   },
+  showDetail: function(e)
+  {
+    console.log(e)
+
+    wx.navigateTo({
+      url: '../play/play?id=1'
+    })
+  },
   onReady:function(){
     // 页面渲染完成
     //String3
