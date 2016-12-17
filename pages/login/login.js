@@ -68,7 +68,9 @@ Page({
                     data: sendData,
                     method: "POST",
                     success: function(res) {
+                      console.log(res.data)
                       wx.setStorageSync('nickname', res.data['Nickname'])
+                      wx.setStorageSync('username', res.data['Username'])
                     }
                    })
 

@@ -4,20 +4,19 @@
     font-family: "Verdana";
 }
 #icon_button{
+    margin-top: 50rpx;
+    width: 90%;
     margin-left: 40rpx;
-    display: inline-block;
-    height:70rpx;
 }
 #input_detail{
     margin-top: 10rpx;
     border-style: solid;
     border-color: #ccc;
     border-width: 2rpx;
-    width: 70%;
+    width: 90%;
+    float: left;
     margin-left: 40rpx;
     border-radius: 10rpx;
-    display: inline-block;
-    height:65rpx;
 }
 #result{
     height: 900rpx;

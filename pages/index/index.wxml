@@ -4,7 +4,7 @@
 </view>
 <view class="titlebar_padding"></view>
 <view class="cntr">
-  <view class = "banner" id = "rctud_title">
+  <!--<view class = "banner" id = "rctud_title">
     <text class = "banner_text" id = "rctud">Recent Update</text>
     <text class = "banner_num" id = "rctud_num">{{rctud_num}} Update</text>
   </view>
@@ -15,7 +15,7 @@
         <view class="show_detail">{{item.img_name}}</view>
       </view>
       <view class="more">more></view>
-  </scroll-view>
+  </scroll-view>-->
 
   <view class = "banner" id = "nyud_title">
     <text class = "banner_text" id = "nyud">Newly Update</text>

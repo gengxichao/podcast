@@ -42,14 +42,14 @@
         <button class="fix_btn" bindtap="save" disabled="{{fixed}}" formType="submit">保存</button>
         <button class="fix_btn" bindtap="fix">修改</button>
     </view>
-
+<!--
     <view id="sub_title">已订阅</view>
     <scroll-view id="subscribe" scroll-y="ture">
-    <!--上下滚动-->
+    
         <view class = "show_box" wx:for="{{subscribe}}" wx:for-item="item">
             <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
             <view class="show_detail">{{item.img_name}}</view>
         </view>
-    </scroll-view>
+    </scroll-view>-->
 
 </form>
