@@ -8,27 +8,30 @@ Page({
 
   setUsername:function(e){
     this.setData({
-      "userName": e.detail.value
+      userName: e.detail.value
     })
   },
   setPassword:function(e){
     this.setData({
-      "password": e.detail.value
+      password: e.detail.value
     })
   },
 
   formBindsubmit:function(e){
     if(e.detail.value.userName.length==0||e.detail.value.password.length==0){
-      this.setData({
-        tip:'用户名、密码不能为空~',
-        userName:'',
-        password:''
+      wx.showModal({
+        title: '信息不完整',
+        content: '请认真填写用户名和密码',
+        showCancel: false
       })
     }
     else{
-      this.setData({
-        tip:'登录中...'
+      wx.showToast({
+            title: '登录中~',
+            icon: 'loading',
+            duration: 2000
       })
+      
       var sendData = '{ \
                "Request":"Login", \
                "UserName":"' + this.password +'", \

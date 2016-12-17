@@ -1,26 +1,27 @@
 <!--login.wxml-->
-<view id="logo">Pretend there is a logo</view>
-<view id="title">PodCast</view>
+<view id="logo">
+  <image src="logo.png" mode="aspectFit"></image>
+</view>
 
 <form id="form" bindsubmit="formBindsubmit">
 
-<view class="section">用户名</view>
-<view class="input">
-  <input name="userName" bindinput="setUsername"/>
-</view>
+  <view class="section">用户名</view>
+  <view class="input">
+    <input name="userName" bindinput="setUsername"/>
+  </view>
 
-<view class="section">密码</view>
-<view class="input">
-    <input name="password" password="true" bindinput="setPassword"/>
-</view>
+  <view class="section">密码</view>
+  <view class="input">
+      <input name="password" password="true" bindinput="setPassword"/>
+  </view>
 
 
-<view style="margin-top:30px;">
-    <button class="login" formType="submit" >登陆</button>
-    <navigator url="../signin/signin" class="signinNav">
-      <button class="signin" >注册</button>
-    </navigator>
-</view>
+  <view style="margin-top:30px;">
+      <button class="login" formType="submit" >登陆</button>
+      <navigator url="../signin/signin" class="signinNav">
+        <button class="signin" >注册</button>
+      </navigator>
+  </view>
 
 </form>
 

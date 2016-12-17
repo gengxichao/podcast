@@ -4,17 +4,16 @@ Page{
 
 #logo{
     text-align: center;
-    margin-top: 150rpx;
+    margin-top: 30rpx;
 }
 #title{
     text-align: center;
-    margin-top: 100rpx;
+    margin-top: 30rpx;
     font-family: "Verdana";
 }
 #form{
     text-align: center;
-    position: relative;
-    top:200rpx;
+    margin-top: 300rpx;
     font-family: "Verdana";
 }
 .login{
