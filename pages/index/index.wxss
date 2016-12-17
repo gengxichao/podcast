@@ -67,6 +67,7 @@
   font-size: 30rpx;
   float: right;
   font-family: "Verdana";
+  text-align: center;
 
 }
 .more{

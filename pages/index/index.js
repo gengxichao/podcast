@@ -6,17 +6,23 @@ Page({
     state:"登录",
     rctud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-         img_name:"pic no.1"},
+         img_name:"pic no.1",
+         id:"001"},
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-        img_name:"pic no.2"},
+        img_name:"pic no.2",
+        id:"002"},
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-        img_name:"pic no.3"},
+        img_name:"pic no.3",
+        id:"003"},
     ],
     rctud_num:"20",
     nyud:[
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png"},
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png"},
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png"},
+        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
+        id:"001"},
+        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
+        id:"002"},
+        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
+        id:"003"},
     ],
     nyud_num:"10",
     hot:[
@@ -29,10 +35,47 @@ Page({
 
   onLoad:function(options){
     var that = this;
-
-
-
-
+    var sendData = '{\n\
+      "Request":"Openpagehot",\n\
+      "Sortby":"uploaddate",\n\
+      }'
+    wx.request({
+      url: 'http://120.77.33.177:8000/HOT',
+      data: sendData,
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      success: function(res){
+        var data = res.data
+        data = data['filelist']
+        data.forEach(function(e){
+            e['imagepath'] = 'http://120.77.33.177:8000' + e['imagepath']
+        })
+        console.log(data)
+        that.setData({
+          nyud: data
+        })
+      }
+    })
+    var sendData = '{\n\
+        "Request":"OpenpageDate",\n\
+        "Sortby":"uploaddate",\n\
+      }'
+    wx.request({
+      url: 'http://120.77.33.177:8000/HOT',
+      data: sendData,
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      success: function(res){
+        var data = res.data
+        data = data['filelist']
+        data.forEach(function(e){
+            e['imagepath'] = 'http://120.77.33.177:8000' + e['imagepath']
+          }
+        )
+        console.log(data)
+        that.setData({
+          hot: data
+        })
+      }
+    })
 
 
 
@@ -108,8 +151,12 @@ Page({
         "nickname": "游客",
         "state":"登录"
     })
-    
-    //String4
+  },
+  play: function(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '../play/play?id=e.detail.id',
+    })
   },
   onReady:function(){
     // 页面渲染完成

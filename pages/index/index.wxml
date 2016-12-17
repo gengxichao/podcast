@@ -19,26 +19,26 @@
 
   <view class = "banner" id = "nyud_title">
     <text class = "banner_text" id = "nyud">Newly Update</text>
-    <text class = "banner_num" id = "nyud_num">{{nyud_num}} Update</text>
+    <!--<text class = "banner_num" id = "nyud_num">{{nyud_num}} Update</text>-->
   </view>
   <scroll-view class="displaybar" id="nyud_cont" scroll-x="ture">
-      <view class = "show_box" wx:for="{{nyud}}" wx:for-item="item">
-        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
-        <view class="show_detail">{{item.img_name}}</view>
+      <view class = "show_box" wx:for="{{nyud}}" wx:for-item="item" bindtap="play">
+        <image class="show_pic" src="{{item.imagepath}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.audioname}}</view>
       </view>
-      <view class="more">more></view>
+      <!--<view class="more">more></view>-->
   </scroll-view>
 
   <view class = "banner" id = "hot_title">
     <text class = "banner_text" id = "hot">Hot</text>
-    <text class = "banner_num" id = "hot_num">{{hot_num}} Update</text>
+    <!--<text class = "banner_num" id = "hot_num">{{hot_num}} Update</text>-->
   </view>
   <scroll-view class="displaybar" id="hot" scroll-x="ture">
-      <view class = "show_box" wx:for="{{hot}}" wx:for-item="item">
-        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
-        <view class="show_detail">{{item.img_name}}</view>
+      <view class = "show_box" wx:for="{{hot}}" wx:for-item="item" bindtap="play">
+        <image class="show_pic" src="{{item.imagepath}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.audioname}}</view>
       </view>
-      <view class="more">more></view>
+      <!--<view class="more">more></view>-->
   </scroll-view>
 </view>
 <view class = "navigator_padding"></view>
