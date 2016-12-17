@@ -1,0 +1,24 @@
+<!--Upload-->
+<view id="title">上传</view>
+
+<view class="upload_box">
+    <view class="subtitle">音频:</view>
+    <button id="start_record" bindtouchstart="touch_start" bindtouchend="touch_end">按住录音</button>
+    <view style="text-align: center">
+        <image id="preview" src="{{audio_path}}" mode="aspectFit"></image>
+    </view>
+</view>
+
+<view class="upload_box">
+    <view class="subtitle">图片:</view>
+    <view id="pic_path">
+        <button id="choose_pic" bindtap="choose_pic">选择图片</button>
+    </view>
+    <view style="text-align: center">
+        <image id="preview" src="{{pic_path}}" mode="aspectFit"></image>
+    </view>
+</view>
+<view id="total_show"></view>
+<view id="upload">
+    <button id="finish_button" bindtap="finish">完成上传!</button>
+</view>

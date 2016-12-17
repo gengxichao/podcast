@@ -1,22 +1,40 @@
 <!--Sign in-->
-<view id="signin">Sign In</view>
 <form id="form" bindsubmit="formBindsubmit" bindreset="reset" bindtap="moifiy">
     <view class="detail">
-        <label>Username</label>
+        <label>用户名</label>
         <input class="input_box" name="username"/>
     </view>
 
     <view class="detail">
-        <label>Password</label>
+        <label>密码</label>
         <input class="input_box" name="password" password="true"/>
     </view>
 
     <view class="detail">
-        <text>Gender</text>
+        <label>确认密码</label>
+        <input class="input_box" name="repassword" password="true"/>
+    </view>
+
+    <view class="detail">
+        <label>昵称</label>
+        <input class="input_box" name="nickname"/>
+    </view>
+
+    <view class="detail">
+        <label>性别</label>
         <radio-group  class="input_box" name="gender">
-            <radio value="male">male</radio>
-            <radio value="female">female</radio>
+            <radio value="male">男</radio>
+            <radio value="female">女</radio>
         </radio-group>
+    </view>
+
+    <view class="detail">
+        <label>生日</label>
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <view class="picker">
+            {{choosebirthday}} {{date}}
+            </view>
+            </picker>
     </view>
 
     <view class="detail">
@@ -24,11 +42,14 @@
         <input class="input_box" name="email"/>
     </view>
 
-    <view class="detail">Telphone
+    <view class="detail">
+        <label>手机号码</label>
         <input class="input_box" name="telphone"/>
     </view>
 
-    <button class="btn" formType="submit">Confirm</button>
+    <view class="btns">
+    <button class="btn" type="primary" formType="submit">Confirm</button>
     <button class="btn" formType="reset" >Reset</button>
+    </view>
     <view style="font-size:35rpx;">{{tip}}</view>
 </form>

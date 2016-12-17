@@ -1,6 +1,6 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="container">
+  <icon type="warn" size="100"></icon>
+  <view id="text">我们非常抱歉地告知您，由于微信小程序自身的BUG，我们暂时无法为您提供音频和图片的上传服务。</view>
+  <button id="button" bindtap="back">点击返回</button>
 </view>

@@ -1,26 +1,13 @@
-#search{
+#more_title{
     text-align: center;
     margin-top: 20rpx;
     font-family: "Verdana";
-}
-#icon_button{
-    margin-left: 40rpx;
-    display: inline-block;
-    height:70rpx;
-}
-#input_detail{
-    margin-top: 10rpx;
+    border-width: 0 0 2rpx 0;
     border-style: solid;
     border-color: #ccc;
-    border-width: 2rpx;
-    width: 70%;
-    margin-left: 40rpx;
-    border-radius: 10rpx;
-    display: inline-block;
-    height:65rpx;
 }
 #result{
-    height: 900rpx;
+    height: 1000rpx;
 }
 .long_show_box{
     width: 100%;
@@ -41,10 +28,4 @@
     font-size: 50rpx;
     padding-top: 50rpx;
     text-align: center;
-}
-#selection{
-    text-align: center;
-    height: 50rpx;
-    margin-top: 20rpx;
-    font-family: "Verdana";
 }

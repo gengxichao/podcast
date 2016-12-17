@@ -2,7 +2,7 @@
 //Page data
 Page({
   data:{
-    nickname:"No Log In",
+    nickname:"游客",
     rctud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
          img_name:"pic no.1"},
@@ -28,6 +28,35 @@ Page({
 
   onLoad:function(options){
     var that = this;
+
+    // wx.setStorageSync('userSession', 'v12al34ue')
+    // wx.setStorageSync('nickname', '超神最帅')
+
+
+    var value = wx.getStorageSync('userSession')
+
+    if (value) {
+      console.log(value)
+      
+      var nickname = wx.getStorageSync('nickname')
+
+      that.setData(
+        {
+          "nickname": nickname,
+        }
+      )
+    }else{
+      console.log("not exist")
+    }
+    
+    
+
+
+    
+
+
+
+
     // 页面初始化 options为页面跳转所带来的参数
     wx.downloadFile({
       url: "http://www.zhuchenshawn.com",//adjust after we set up the server.

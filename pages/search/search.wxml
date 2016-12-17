@@ -1,16 +1,19 @@
 <!--Search-->
-<view id="search">Search</view>
+<!--<view id="search">搜索</view>-->
 <form id="form" bindsubmit="formBindsubmit"> 
-    <input id="input_detail" name="search_thing" auto-focus="true"/>
+<view class="section">
+    <input id="input_detail" name="search_thing" auto-focus="true" bindinput="setSearchField"/>
+    <button id="icon_button" formType="submit"><icon type="search" color="skyblue"></icon></button>
+</view>
     <view id="selection">
         <picker value="{{index}}" range="{{array}}" bindchange="listenerPickerSelected">
         <view>
-            search by：{{array[index]}}
+            搜索字段：{{array[index]}}
         </view>
         </picker>
     </view>
-    <button id="icon_button" formType="submit"><icon  type="search" color="skyblue"></icon></button>
 </form>
+
 <scroll-view id="result" scroll-y="true">
     <view class="long_show_box" wx:for="{{result}}" wx:for-item="item">
         <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>

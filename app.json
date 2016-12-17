@@ -6,7 +6,9 @@
     "pages/personal/personal",
     "pages/search/search",
     "pages/play/play",
-    "pages/signin/signin"
+    "pages/signin/signin",
+    "pages/upload/upload",
+    "pages/more/more"
   ],
   "window":{
     "backgroundTextStyle":"light",

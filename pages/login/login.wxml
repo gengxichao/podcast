@@ -6,12 +6,12 @@
 
 <view class="section">用户名</view>
 <view class="input">
-  <input name="userName"/>
+  <input name="userName" bindinput="setUsername"/>
 </view>
 
 <view class="section">密码</view>
 <view class="input">
-    <input name="password" password="true" />
+    <input name="password" password="true" bindinput="setPassword"/>
 </view>
 
 

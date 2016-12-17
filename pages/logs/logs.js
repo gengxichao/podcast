@@ -1,14 +1,10 @@
 //logs.js
-var util = require('../../utils/util.js')
 Page({
-  data: {
-    logs: []
+  data:{
   },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(function (log) {
-        return util.formatTime(new Date(log))
-      })
+  back:function(){
+    wx.navigateBack({
+      delta: 2, // 回退前 delta(默认为1) 页面
     })
   }
 })

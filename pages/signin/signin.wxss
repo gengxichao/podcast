@@ -1,3 +1,10 @@
+Page{
+    background-color: #fbf9fe;
+    padding-top: 30rpx;
+}
+label{
+    margin: 20rpx 0 20rpx;
+}
 #signin{
     text-align: center;
     font-size: 50rpx;
@@ -8,23 +15,25 @@
     font-family: "Verdana";
 }
 .detail{
-    height: 100rpx;
     width: 100%;
     text-align: center;
-    margin-top: 40rpx;
     font-family: "Verdana";
-}
-.input_box{
-    border-width: 1rpx ;
-    border-style: solid;
-    border-color: #ccc;
-    width: 80%;
-    margin-left: 80rpx;
-    border-radius: 10rpx;
 }
 .btn{
-    margin-top: 50rpx;
-    width: 50%;
+    margin: 20rpx 10rpx 0;
+    width: 30%;
     background-color: lightskyblue;
     font-family: "Verdana";
+    display: inline-block;
+}
+.btns{
+    text-align: center;
+}
+input, picker, radio-group{
+    background-color: white;
+    height: 60rpx;
+    margin: 20rpx 0 20rpx;
+}
+radio{
+    margin:0 50rpx 0;
 }

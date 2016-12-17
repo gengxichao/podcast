@@ -17,14 +17,6 @@ Page{
     top:200rpx;
     font-family: "Verdana";
 }
-.input_box{
-    border-width: 1rpx ;
-    border-style: solid;
-    border-color: #ccc;
-    width: 80%;
-    margin-left: 80rpx;
-    border-radius: 10rpx;
-}
 .login{
     width: 30%;
     background-color: lightgreen;
@@ -43,6 +35,7 @@ Page{
     margin-left: 50rpx;
     margin-top: 250rpx;
     font-family: "Verdana";
+    text-align: center;
 }
 .input{
     background-color: white;

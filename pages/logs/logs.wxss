@@ -1,8 +1,20 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.container{
+  text-align: center;
+  margin-top: 100rpx;
+  margin-left: 80rpx;
+
+  width: 600rpx;
+  background-color: skyblue;
+ border-style: solid;
+ border-color: transparent;
+ border-width: 20rpx; 
 }
-.log-item {
-  margin: 10rpx;
+#text{
+  font-family: "Verdana";
+  margin-top: 50rpx;
+}
+#button{
+  width: 50%;
+  height: 100rpx;
+  top: 50rpx;
 }
