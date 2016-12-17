@@ -13,6 +13,13 @@
         index: e.detail.value
       });
     }, 
+
+    play: function(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '../play/play?id=' + e.target.id,
+    })
+    },
     onLoad:function(options){
       // 页面初始化 options为页面跳转所带来的参数
     },
