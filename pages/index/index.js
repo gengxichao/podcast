@@ -4,18 +4,6 @@ Page({
   data:{
     nickname:"游客",
     state:"登录",
-    rctud:[
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-         img_name:"pic no.1",
-         id:"001"},
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-        img_name:"pic no.2",
-        id:"002"},
-        {img_path:"http://www.lumiaxu.com/static/images/pd.png",
-        img_name:"pic no.3",
-        id:"003"},
-    ],
-    rctud_num:"20",
     nyud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
         id:"001"},
@@ -135,14 +123,7 @@ Page({
       }
     })
   },
-  showDetail: function(e)
-  {
-    console.log(e)
 
-    wx.navigateTo({
-      url: '../play/play?id=1'
-    })
-  },
   logout: function(e){
     var that = this
 
@@ -155,7 +136,7 @@ Page({
   play: function(e){
     console.log(e);
     wx.navigateTo({
-      url: '../play/play?id=e.detail.id',
+      url: '../play/play?id=' + e.target.id,
     })
   },
   onReady:function(){

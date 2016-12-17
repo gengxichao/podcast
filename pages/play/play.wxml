@@ -6,6 +6,3 @@
 <view id="audio">
     <audio id="myaudio" controls="true" src="{{audio_path}}" poster="{{pic}}" name="{{title}}" author="{{author}}" ></audio>
 </view>
-<view id="detail_box">
-    <view id="detail">{{detail}}</view>
-</view>

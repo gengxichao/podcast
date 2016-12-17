@@ -23,8 +23,8 @@
   </view>
   <scroll-view class="displaybar" id="nyud_cont" scroll-x="ture">
       <view class = "show_box" wx:for="{{nyud}}" wx:for-item="item" bindtap="play">
-        <image class="show_pic" src="{{item.imagepath}}" mode="aspectFit"></image>
-        <view class="show_detail">{{item.audioname}}</view>
+        <image class="show_pic" src="{{item.imagepath}}" id="{{item.audioname}}" mode="aspectFit"></image>
+        <view class="show_detail" id="{{item.audioname}}">{{item.audioname}}</view>
       </view>
       <!--<view class="more">more></view>-->
   </scroll-view>
