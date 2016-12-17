@@ -93,6 +93,7 @@
   border-width: 2rpx 0 0 0;
   border-style: solid;
   border-color: #ccc;
+  text-align: justify;
 }
 .navibtn{
   height: 125rpx;

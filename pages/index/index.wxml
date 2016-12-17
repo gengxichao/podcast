@@ -45,15 +45,15 @@
 <view class = "navigator">
     <navigator class="navibtn" url="../login/login">
       <icon class="icon" type="success_circle" size="30" color="#63B8FF"></icon>
-      <text class="icon_text">LOG IN</text>
+      <text class="icon_text">登陆</text>
     </navigator>
     <navigator class="navibtn" url="../personal/personal">
       <icon class="icon" type="info_circle" size="30" color="#63B8FF"></icon>
-      <text class="icon_text">PERSONAL</text>
+      <text class="icon_text">个人信息</text>
     </navigator>   
     <navigator class="navibtn" url="../search/search">
       <icon class="icon" type="search" size="30" color="#63B8FF"></icon>   
-      <text class="icon_text">SEARCH</text>
+      <text class="icon_text">搜索</text>
     </navigator>
     <navigator class="navibtn" url="../play/play">
       <icon class="icon" type="download" size="30" color="#63B8FF"></icon>     

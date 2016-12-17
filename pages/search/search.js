@@ -1,10 +1,11 @@
   Page({
     data:{
-         result:[],
+          result:[],
           array: ['主播', '节目分类'],
           index: 0,
           searchField:""
-        },
+    },
+
       listenerPickerSelected: function(e) {
       //改变index值，通过setData()方法重绘界面
       this.setData({
@@ -35,35 +36,69 @@
     },
 
     formBindsubmit:function(e){
-
+      
       var search = this.data.searchField
+      var index = this.data.index
+      var that = this
+      var searchResult = []
 
-      if(search == "主播")
+      if(index == 1)
       {
-        var sendData = '{ \
-                  "Request":"RequestForSpecificKind",\
-                  "Category":"' + search + '",\
-                  "Sortby":"Hotindex",\
+        var sendData = '{\n \
+                  "Request":"RequestForSpecificKind",\n\
+                  "Category":"' + search + '",\n\
+                  "Sortby":"Hotindex",\n\
                   }'
+        console.log(sendData)
         wx.request({
-          url: 'http://localhost/Search', //仅为示例，并非真实的接口地址
+          url: 'http://120.77.33.177:8000/Search', //仅为示例，并非真实的接口地址
+          method: 'POST',
           data: sendData,
           success: function(res) {
             var data = res.data
+            data = data["filenamelist"]
+            console.log(data)
             
-            console.log(res.data)
+            data.forEach(function(e){
 
+              var sendData = '{\n\
+                  "Request":"AskForResource",\n\
+                  "FileType":"Images",\n\
+                  "FileName":"' + e['FileNAME'] + '",\n\
+                }'
+              console.log(sendData)
+              wx.request({
+                url: 'http://120.77.33.177:8000/askResource.test', //仅为示例，并非真实的接口地址
+                method: 'POST',
+                data: sendData,
+                success: function(res) {
+                  var data = res.data
+                  searchResult.push({
+                    name: e['FileNAME'],
+                    filePath: data['FilePath']
+                  })
+                }
+              })
+            })
+
+              
+              console.log(searchResult)
+              that.setData({
+                result: searchResult
+              })
+              console.log(result)
 
           }
         })
       }else{
-        var sendData = '{ \
-          "Request":"RequestForUserInfo",\
-          "SearchBy":"Username",\
-          "Content":"' + search + '",\
+        var sendData = '{\n\
+          "Request":"SpecificHostAudio",\n\
+          "HostName":"' + search + '",\n\
+          "Sortby":"Hotindex",\n\
           }'
         wx.request({
-          url: 'http://localhost/Search', //仅为示例，并非真实的接口地址
+          url: 'http://120.77.33.177:8000/Search', //仅为示例，并非真实的接口地址
+          method: 'POST',
           data: sendData,
           success: function(res) {
             var data = res.data
@@ -74,49 +109,29 @@
           }
         })
 
-
-
-
-
-
-
-
-
-
       }
 
-
-
-
-      // wx.request({
-      //   url: 'http://localhost/Search', //仅为示例，并非真实的接口地址
-      //   data: sendData,
-      //   success: function(res) {
-      //     var data = res.data
-          
-      //     console.log(res.data)
-
-
-      //   }
-      // })
-
-
-
-
-
-      // this.setData({
-      //   "result[0].img_path":"http://www.zhuchenshawn.com/images/pic07.jpg",
-      //   "result[0].img_name":"result no.1",
-      //   "result[1].img_path":"http://www.zhuchenshawn.com/images/pic07.jpg",
-      //   "result[1].img_name":"result no.2",
-      //   "result[2].img_path":"",
-      //   "result[2].img_name":"",
-      //   "result[3].img_path":"",
-      //   "result[3].img_name":"",
-      //   "result[4].img_path":"",
-      //   "result[4].img_name":"",
-      //   "result[5].img_path":"",
-      //   "result[5].img_name":"",
-      // })
   },
   })
+
+
+
+
+  
+          
+              // var sendData = '{\n\
+              //     "Request":"AskForResource",\n\
+              //     "FileType":"Audio",\n\
+              //     "FileName":"' + e['FileNAME'] + '",\n\
+              //   }'
+              // console.log(sendData)
+              // wx.request({
+              //   url: 'http://120.77.33.177:8000/askResource.test', //仅为示例，并非真实的接口地址
+              //   method: 'POST',
+              //   data: sendData,
+              //   success: function(res) {
+              //     var data = res.data
+              //     console.log(data)
+              //   }
+              // })
+              

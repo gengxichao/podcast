@@ -33,30 +33,6 @@ Page({
     // wx.setStorageSync('nickname', '超神最帅')
 
 
-    var value = wx.getStorageSync('userSession')
-
-    if (value) {
-      console.log(value)
-      
-      var nickname = wx.getStorageSync('nickname')
-
-      that.setData(
-        {
-          "nickname": nickname,
-        }
-      )
-    }else{
-      console.log("not exist")
-    }
-    
-    
-
-
-    
-
-
-
-
     // 页面初始化 options为页面跳转所带来的参数
     wx.downloadFile({
       url: "http://www.zhuchenshawn.com",//adjust after we set up the server.
@@ -97,7 +73,7 @@ Page({
         //console.log(res)
       },
       fail: function() {
-        console.log(err)
+        console.log()
       },
       complete: function() {
         console.log("complete")
@@ -117,7 +93,22 @@ Page({
     //String3
   },
   onShow:function(){
-    // 页面显示
+    var that = this
+    var value = wx.getStorageSync('userSession')
+
+    if (value) {
+      console.log(value)
+      
+      var nickname = wx.getStorageSync('nickname')
+
+      that.setData(
+        {
+          "nickname": nickname,
+        }
+      )
+    }else{
+      console.log("not exist")
+    }
     //String4
   },
   onHide:function(){

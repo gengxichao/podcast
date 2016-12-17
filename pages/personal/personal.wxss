@@ -1,6 +1,3 @@
-Page{
-    background-color: #fbf9fe;
-}
 #username{
     height: 70rpx;
     width: 100%;
@@ -49,7 +46,7 @@ Page{
 #sub_title{
     height: 50rpx;
     width: 100%;
-    margin-top: 30rpx;
+    margin-top: 150rpx;
     text-align: center;
     font-family: "Verdana";
     background-color: skyblue;
@@ -57,11 +54,21 @@ Page{
     border-style: solid;
     border-color: #ccc;
 }
-.input{
+input, picker{
     width: 75%;
+    height: 60rpx;
     border-radius: 10rpx;
     border-width: 1rpx;
     border-style: solid;
     border-color: #ccc;
     margin-left: 100rpx;
+}
+#btn_bar{
+    margin-top: 30rpx;
+}
+.fix_btn{
+    float: left;
+    width: 30%;
+    margin-left: 105rpx;
+    background-color: skyblue;
 }

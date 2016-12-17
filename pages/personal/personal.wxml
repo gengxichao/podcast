@@ -2,28 +2,48 @@
 <view id="username">{{username}}</view>
 <form id="form" bindsubmit="formBindsubmit" bindtap="moifiy">
     <view class="detail">
-        <label>Password</label>
-        <input class="input" name="password" password="true" value="{{password}}" disabled="true"/>
+        <label>密码</label>
+        <input class="input" name="password" password="true" value="{{password}}" disabled="{{fixed}}"/>
     </view>
 
     <view class="detail">
-        <text>Gender</text>
+        <text>性别</text>
         <radio-group class="input">
-            <radio value="male" checked="true" disabled="true">male</radio>
-            <radio value="female" disabled="true">female</radio>
+            <radio value="male" checked="{{male}}" disabled="true">male</radio>
+            <radio value="female" checked="{{female}}" disabled="true">female</radio>
         </radio-group>
     </view>
 
     <view class="detail">
+        <label>昵称</label>
+        <input class="input" name="nickname" value="{{nickname}}" disabled="{{fixed}}"/>
+    </view>
+
+    <view class="detail">
         <label>E-mail</label>
-        <input class="input" name="email" value="{{email}}" disabled="true"/>
+        <input class="input" name="email" value="{{email}}" disabled="{{fixed}}"/>
     </view>
 
-    <view class="detail">Telphone
-        <input class="input" name="telphone" value="{{telphone}}" disabled="true"/>
+    <view class="detail">
+        <label>电话</label>
+        <input class="input" name="telphone" value="{{telphone}}" disabled="{{fixed}}"/>
     </view>
 
-    <view id="sub_title">您的订阅</view>
+    <view class="detail">
+        <label>生日</label>
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" disabled="{{fixed}}">
+            <view class="picker">
+            {{choosebirthday}} {{date}}
+            </view>
+            </picker>
+    </view>
+
+    <view id="btn_bar">
+        <button class="fix_btn" bindtap="save" disabled="{{fixed}}" formType="submit">保存</button>
+        <button class="fix_btn" bindtap="fix">修改</button>
+    </view>
+
+    <view id="sub_title">已订阅</view>
     <scroll-view id="subscribe" scroll-y="ture">
     <!--上下滚动-->
         <view class = "show_box" wx:for="{{subscribe}}" wx:for-item="item">

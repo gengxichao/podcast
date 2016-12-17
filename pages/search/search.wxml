@@ -16,7 +16,7 @@
 
 <scroll-view id="result" scroll-y="true">
     <view class="long_show_box" wx:for="{{result}}" wx:for-item="item">
-        <image class="show_pic" src="{{item.img_path}}" mode="aspectFit"></image>
-        <view class="show_detail">{{item.img_name}}</view>
+        <image class="show_pic" src="{{item.filePath}}" mode="aspectFit"></image>
+        <view class="show_detail">{{item.name}}</view>
     </view>
 </scroll-view>
