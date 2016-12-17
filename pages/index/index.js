@@ -3,6 +3,7 @@
 Page({
   data:{
     nickname:"游客",
+    state:"登录",
     rctud:[
         {img_path:"http://www.lumiaxu.com/static/images/pd.png",
          img_name:"pic no.1"},
@@ -88,12 +89,23 @@ Page({
       url: '../play/play?id=1'
     })
   },
+  logout: function(e){
+    var that = this
+
+    wx.clearStorageSync() 
+    that.setData({
+        "nickname": "游客",
+        "state":"登录"
+    })
+    
+    //String4
+  },
   onReady:function(){
     // 页面渲染完成
     //String3
   },
   onShow:function(){
-    var that = this
+   var that = this
     var value = wx.getStorageSync('userSession')
 
     if (value) {
@@ -104,12 +116,12 @@ Page({
       that.setData(
         {
           "nickname": nickname,
+          "state":"注销"
         }
       )
     }else{
       console.log("not exist")
     }
-    //String4
   },
   onHide:function(){
     // 页面隐藏

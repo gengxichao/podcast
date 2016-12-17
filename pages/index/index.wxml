@@ -43,9 +43,9 @@
 </view>
 <view class = "navigator_padding"></view>
 <view class = "navigator">
-    <navigator class="navibtn" url="../login/login">
+    <navigator class="navibtn" url="../login/login" bindtap="logout">
       <icon class="icon" type="success_circle" size="30" color="#63B8FF"></icon>
-      <text class="icon_text">登陆</text>
+      <text class="icon_text">{{state}}</text>
     </navigator>
     <navigator class="navibtn" url="../personal/personal">
       <icon class="icon" type="info_circle" size="30" color="#63B8FF"></icon>
@@ -55,8 +55,8 @@
       <icon class="icon" type="search" size="30" color="#63B8FF"></icon>   
       <text class="icon_text">搜索</text>
     </navigator>
-    <navigator class="navibtn" url="../play/play">
-      <icon class="icon" type="download" size="30" color="#63B8FF"></icon>     
-      <text class="icon_text">DESCRIBE</text>
+    <navigator class="navibtn" url="../upload/upload">
+      <icon class="icon" type="download" size="30" color="#63B8FF" style="transform:rotate(180deg)"></icon>     
+      <text class="icon_text">上传</text>
     </navigator>
 </view>

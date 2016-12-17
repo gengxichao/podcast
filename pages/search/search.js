@@ -1,12 +1,21 @@
   Page({
     data:{
-          result:[],
-          array: ['主播', '节目分类'],
+          searchResult:[
+            {
+              filePath:"http://120.77.33.177:8000/root/xiaochengxu/aaad/Files/test.jpg",
+              name:"test"
+            },{
+              filePath:"http://120.77.33.177:8000/root/xiaochengxu/aaad/Files/test1.jpg",
+              name:"test1"
+            }
+          ],
+          SearchList: ['主播', '节目分类'],
           index: 0,
-          searchField:""
+          searchField:"",
+          helloworld:""
     },
 
-      listenerPickerSelected: function(e) {
+    listenerPickerSelected: function(e) {
       //改变index值，通过setData()方法重绘界面
       this.setData({
         index: e.detail.value
@@ -40,7 +49,7 @@
       var search = this.data.searchField
       var index = this.data.index
       var that = this
-      var searchResult = []
+      var searchResult = new Array
 
       if(index == 1)
       {
@@ -55,11 +64,14 @@
           method: 'POST',
           data: sendData,
           success: function(res) {
-            var data = res.data
-            data = data["filenamelist"]
-            console.log(data)
-            
-            data.forEach(function(e){
+            var recevData = res.data
+            recevData = recevData["filenamelist"]
+            // console.log(recevData)
+            that.setData({
+              searchResult: recevData
+            })
+            console.log(that.data.searchResult)
+            recevData.forEach(function(e){
 
               var sendData = '{\n\
                   "Request":"AskForResource",\n\
@@ -72,21 +84,24 @@
                 method: 'POST',
                 data: sendData,
                 success: function(res) {
-                  var data = res.data
+                  var recevData = res.data
                   searchResult.push({
-                    name: e['FileNAME'],
-                    filePath: data['FilePath']
+                    'name': e['FileNAME'],
+                    'filePath': recevData['FilePath']
                   })
+                  console.log("successs")
+                  console.log(searchResult)
                 }
               })
             })
-
+            that.setMyData(searchResult)
               
-              console.log(searchResult)
-              that.setData({
-                result: searchResult
-              })
-              console.log(result)
+            that.data.searchResult = searchResult
+              // that.setData({
+              //   helloworld: 1,
+              //   searchResult: searchResult
+              // })
+              // console.log(that.data.searchResult)
 
           }
         })
@@ -112,6 +127,13 @@
       }
 
   },
+    setMyData:function(e)
+    {
+      console.log(e)
+      this.setData({
+        searchResult: e
+      })
+    },
   })
 
 

@@ -6,17 +6,17 @@
     <button id="icon_button" formType="submit"><icon type="search" color="skyblue"></icon></button>
 </view>
     <view id="selection">
-        <picker value="{{index}}" range="{{array}}" bindchange="listenerPickerSelected">
+        <picker value="{{index}}" range="{{SearchList}}" bindchange="listenerPickerSelected">
         <view>
-            搜索字段：{{array[index]}}
+            搜索字段：{{SearchList[index]}}
         </view>
         </picker>
     </view>
 </form>
 
 <scroll-view id="result" scroll-y="true">
-    <view class="long_show_box" wx:for="{{result}}" wx:for-item="item">
+    <view class="long_show_box" wx:for="{{searchResult}}" wx:for-item="item">
         <image class="show_pic" src="{{item.filePath}}" mode="aspectFit"></image>
-        <view class="show_detail">{{item.name}}</view>
+        <view class="show_detail">{{item.FileNAME}}</view>
     </view>
 </scroll-view>
